@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ABSnap</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<!--
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		-->
+		<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+          			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            			<span class="sr-only">Toggle navigation</span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+          			</button>
+		  			<a class="navbar-brand" id="brand">ABSnap</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse"> 
+					<ul class="nav navbar-nav">
+						<li><a href="#" id="print"><i class="glyphicon glyphicon-print"></i> Drucken</a></li>
+						<li><a href="#" id="export"><i class="glyphicon glyphicon-export"></i> Exportieren</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="students_container">
+			<div class="row">
+				<div class="col-md-12">
+					<input type="text" placeholder="Klasse/Kurs" id="coursename">
+					<div class="visible-md visible-lg">
+						<table class="table" id="studentsTableView">
+							<thead>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div class="hidden-md hidden-lg">
+						<ul class="list-unstyled" id="studentsListView">
+						</ul>
+					</div>
+					<a href="#" id="createstudent"><i class="glyphicon glyphicon-plus"></i> Schüler anlegen</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" id="editstudent_container" hidden>
+			<div class="row">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>Schüler anlegen</legend>
+						<input type="text" placeholder="Vorname(n)" id="firstname">
+						<input type="text" placeholder="Nachname" id="lastname">
+						<input type="date" placeholder="Geburtsdatum" id="dateofbirth">
+						<input type="email" placeholder="Email-Adresse" id="email">
+						<div>
+							<!-- data-src -->
+							<img src="assets/portrait-200x200.png" class="img-thumbnail" alt="Portrait" id="portrait">	
+							<button type="button" class="btn btn-primary" id="photobooth"><i class="glyphicon glyphicon-camera"></i> Photo</button>
+						</div>
+						<button type="button" class="btn btn-default" id="editcancel"><i class="glyphicon glyphicon-remove"></i> Abbrechen</button>
+						<button type="button" class="btn btn-success" id="editok"><i class="glyphicon glyphicon-save"></i> Speichern</button>
+					</fieldset>
+					
+				</div>
+			</div>					
+		</div>
+		
+		<div class="container" id="photobooth_container" hidden>
+			<div class="row">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>Portrait erstellen</legend>
+					</fieldset>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="img-thumbnail"><div id="camera"></div></div>	
+					<button type="button" class="btn btn-primary" id="takephoto"><i class="glyphicon glyphicon-camera"></i> Photo</button>
+				</div>
+				<div class="col-md-6">
+					<img src="assets/portrait-400x400.png" class="img-thumbnail" alt="Portrait" id="preview">	
+					<button type="button" class="btn btn-default" id="photocancel"><i class="glyphicon glyphicon-remove"></i> Abbrechen</button>
+					<button type="button" class="btn btn-success" id="photook"><i class="glyphicon glyphicon-save"></i> Speichern</button>
+				</div>
+			</div>
+			
+		</div>
+		<!--
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+		<script src="js/FileSaver.js"></script>
+		<script src="js/webcam.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
